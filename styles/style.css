@@ -580,6 +580,11 @@
   will-change: transform;
 }
 
+.chat-section.ru .iphones .parallax-element {
+  background: url("../public/media/images/chat/iphonesRu.png") no-repeat
+    center/contain;
+}
+
 .chat-section .chat-icon {
   transform: scale(0.7);
   opacity: 0;
