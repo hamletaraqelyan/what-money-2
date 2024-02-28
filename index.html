@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="WhatMoney | Start selling instantly" />
+    <meta
+      property="og:description"
+      content="We don't change money. We change your lifestyle."
+    />
+    <meta
+      property="og:image"
+      content=""
+    />
+    <meta property="og:type" content="website" />
+
+    <title>WhatMoney | Start selling instantly</title>
+    <meta
+      name="description"
+      content="We don't change money. We change your lifestyle."
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="WhatMoney | Start selling instantly" />
+    <meta
+      name="twitter:description"
+      content="We don't change money. We change your lifestyle."
+    />
+    <meta
+      name="twitter:image"
+      content=""
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+
+    <link rel="stylesheet" href="./styles//components/loader.css" />
+    <link rel="stylesheet" href="./styles//components/header.css" />
+    <link rel="stylesheet" href="./styles/components/buttons.css" />
+    <link rel="stylesheet" href="./styles/components/footer.css" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+  <body>
+    <header>
+      <img
+        src="./public/media/icons/whatmoney-white-logo.svg"
+        alt="Header WhatMoney logo"
+      />
+      <div class="flex align-center">
+        <div class="lang-selector">
+          <div class="selected">
+            RU
+            <img
+              src="./public/media/icons/arrow-down-light.svg"
+              alt="arrow down icon"
+            />
+          </div>
+          <ul class="list">
+            <li>
+              <a  href="./index.html">EN</a>
+            </li>
+            <li>
+              <a class="current" href="./ru/index.html">RU</a>
+            </li>
+          </ul>
+        </div>
+        <button class="button white">Инвестировать</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner-section mb-60">
+        <div class="content">
+            <img src="./public/media/icons/whatmoney-white-logo.svg" alt="">
+            <br>
+            <h1 class="animateText bannerText1">Откройте для себя</h1>
+            <h1 class="text-blue animateText bannerText2">инвестирование</h1>
+            <h1 class="animateText bannerText3">в инновационные финансовые</h1>
+            <h1 class="animateText bannerText4">сервисы с WhatMoney</h1>
+            <button class="button">Инвестировать</button>
+        </div>
+        <img class="bannerGlobe" src="./public/media/images/banner/bannerGlobe.png" alt="">
+      </section>
+
+      <section class="animated-cards mb-60">
+        <h2>
+          Мы зарабатываем на <br> <span class="text-blue"> комиссии</span> с осуществления <br> финансовых операций
+        </h2>
+        <div class="cards-wrapper">
+          <div class="card-item">
+            <p>Перевод средств <br> из <span class="text-blue">СНГ в США</span> <br>и из США в СНГ</p>
+          </div>
+          <div class="card-item">
+            <p>Покупка <br> заграничной <br> <span class="text-blue">недвижимости,</span> авто, <br> оплата обучения</p>
+          </div>
+          <div class="card-item">
+            <p>Продажа <br> криптовалюты за <br> <span class="text-blue">фиатную валюту</span></p>
+          </div>
+        </div>
+
+        <div class="cards-wrapper rightAligned">
+          <div class="card-item">
+            <p><span class="text-blue">Оплата заграничных инвойсов</span> (товары, услуги)</p>
+          </div>
+          <div class="card-item">
+            <p><span class="text-blue">Обмен криптовалюты</span> на<br> наличные или безналичные <br> средства</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="globe-section mb-60">
+        <div class="left">
+          <h3 class="text-white-gradient">За последние 9 месяцев</h2>
+          <div>
+            <h2 class="text-white-gradient">2-3%</h2>
+            <p>средний чек <br>с каждой транзакции</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="text-block">
+            <div>
+              <h3>5000+</h3>
+              <p>транзакций</p>
+            </div>
+            <div>
+              <h3>$50млн</h3>
+              <p>общий оборот</p>
+            </div>
+            <div>
+              <h3>300+</h3>
+              <p>постоянных <br>клиентов</p>
+            </div>
+          </div>
+          <div class="globe-image"></div>
+        </div>
+      </section>
+
+      <section id="pinned-section-2" class="gsap-container mb-60">
+        <div class="gsap-image robo">
+          <div class="text-box-robo">
+            <h3 class="text-white-180-gradient">
+                От ручной обработки <br> к цифровой революции
+            </h3>
+            <p>
+              Исследуйте будущее финансов с надёжными и<br>  контролируемыми валютными переводами<br> прямо у вас на ладони
+            </p>
+          </div>
+        </div>
+        <button class="button fadeOutBtn">Инвестировать</button>
+        <div class="gsap-image human">
+        </div>
+        <div class="gsap-image spiral">
+          <div class="text-box-spiral text-center">
+            <h3 class="text-white-180-gradient">Первая в США IT-платформа <br>для <span class="text-blue-gradient">быстрых и безопасных</span><br> онлайн-транзакций клиентов</h3>
+          </div>
+          <div class="phoneImage"></div>
+        </div>
+      </section>
+      <section class="gsap-container-mobile">
+        <div class="robo-human">
+          <h3>
+            From manual processing <br />to the
+            <span class="text-blue">digital</span> revolution
+          </h3>
+          <img src="./public/media/images/robo-human.png" alt="Robo Human" />
+          <p>
+            Experience the future of finance with secure and informed currency
+            transactions right in the palm of your hand.
+          </p>
+        </div>
+        <div class="spiral">
+          <div class="text-block">
+            <h3>24/7 Security</h3>
+            <p>We monitor and control the safety and security of your money</p>
+            <button class="button open-modal-trigger">Get started</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="just-registration mb-60">
+        <h2>Простая <span class="text-blue">регистрация</span></h2>
+        <div class="iphonesImage"></div>
+        <div class="showCard showCard1"></div>
+        <div class="showCard showCard2"></div>
+        <div class="showCard showCard3"></div>
+      </section>
+
+      <section class="debit-section">
+        <h2 class="text-white-gradient">
+          <span class="text-blue-gradient">Ввод средств</span> <br>
+          на депозит, включая <br> 
+          ввод рублей
+        </h2>
+        <div class="iphones"></div>
+      </section>
+
+      <section class="personal-section mb-60">
+        <h2 class="text-black-gradient">
+          <span class="text-brightblue-gradient">Моментальный обмен</span> <br>
+          внутри личного кабинета
+        </h2>
+        <div class="iphone parallax-container">
+          <div class="parallax-element"></div>
+        </div>
+      </section>
+
+      <section class="chat-section mb-60">
+        <h2 class="text-white-gradient">
+          <span class="text-blue-gradient">Круглосуточный чат</span> со службой <br>
+          поддержки и курьерами по <br> доставке наличных
+        </h2>
+        <div class="iphones parallax-container">
+          <div class="parallax-element"></div>
+        </div>
+        <img class="conversation-icon" src="./public/media/images/chat/conversation.png" alt="Conversation icon">
+        <img class="user-icon" src="./public/media/images/chat/userLabel.png" alt="User icon">
+        <img class="bot-icon" src="./public/media/images/chat/bot.svg" alt="Bot icon">
+        <img class="chat-icon" src="./public/media/images/chat/chatIcon.svg" alt="Chat icon">
+      </section>
+
+      <section id="pinned-section-3" class="the-future-arrived">
+        <div class="content-block">
+          <h2>
+            All in <span class="text-blue">one place</span> on <br />
+            any device
+          </h2>
+          <div class="scalable-element">
+            <div class="text-box">
+              <h2>The Future has arrived</h2>
+              <button class="button open-modal-trigger">Get started</button>
+            </div>
+          </span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="top flex column align-center">
+        <img
+          src="./public/media/icons/whatmoney-logo.svg"
+          alt="Footer WhatMoney logo"
+        />
+        <div class="follow-us">
+          <p>Подписывайтесь на нас</p>
+          <div class="socials">
+            <a href=""
+              ><img
+                src="./public/media/icons/facebook.svg"
+                alt="facebook social icon"
+            /></a>
+            <a href=""
+              ><img
+                src="./public/media/icons/twitter.svg"
+                alt="twitter social icon"
+            /></a>
+            <a href=""
+              ><img
+                src="./public/media/icons/instagram.svg"
+                alt="instagram social icon"
+            /></a>
+            <a href="https://t.me/WhatMoneyExchange" target="_blank">
+              <img
+                src="./public/media/icons/telegram.svg"
+                alt="telegram social icon"
+            />
+          </a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="bottom text-center">
+        <p>Авторское право © 2024 WhatMoney</p>
+      </div>
+    </footer>
+
+    <!-- <div class="loader">
+        <div>
+            <img src="./public/media/icons/whatmoney-white-logo.svg" alt="">
+        </div>
+    </div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

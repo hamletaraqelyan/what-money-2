@@ -1,0 +1,47 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-dark-blue);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s ease forwards 5s;
+  visibility: visible;
+}
+
+.loader div,
+.loader img {
+  width: 35.31vw;
+}
+
+.loader div {
+  overflow: hidden;
+}
+
+.loader img {
+  will-change: transform;
+  transform: translateY(100%);
+  animation: loading 5s ease forwards;
+}
+
+@keyframes loading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

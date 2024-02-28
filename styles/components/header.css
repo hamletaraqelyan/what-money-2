@@ -1,0 +1,114 @@
+header {
+  max-height: var(--header-height);
+  background-color: transparent;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.7vw 7.2vw;
+}
+
+header img {
+  width: 10vw;
+}
+
+header .lang-selector {
+  position: relative;
+  margin-right: var(--spacing-15);
+  padding: 0.6vw var(--spacing-24) 0.7vw;
+  font-size: var(--font-size-20);
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+header .lang-selector .selected {
+  display: flex;
+  align-items: center;
+  color: var(--text-white-clear);
+}
+
+header .lang-selector .selected img {
+  margin-left: 0.5vw;
+  display: inline-block;
+  width: 1vw;
+  aspect-ratio: 1/1;
+}
+
+header .lang-selector .list {
+  background-color: var(--bg-white);
+  position: absolute;
+  border-radius: 20px;
+  left: 50%;
+  top: calc(100% - 0.28rem);
+  transform: translate(-50%, 10%);
+  padding: var(--spacing-8);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s step-end, opacity 0.4s ease;
+}
+
+header .lang-selector .list li:not(:last-child) {
+  margin-bottom: var(--spacing-8);
+}
+
+header .lang-selector .list a {
+  font-size: var(--font-size-20);
+  border-radius: 15px;
+  display: block;
+  color: var(--text-dark);
+  padding: var(--spacing-15) var(--spacing-36);
+  transition: background-color 0.4s ease;
+}
+
+header .lang-selector .list a.current {
+  pointer-events: none;
+}
+
+header .lang-selector .list a.current,
+header .lang-selector .list a:hover {
+  background-color: var(--bg-light-blue);
+}
+
+header .lang-selector:hover .list {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.4s step-start, opacity 0.4s ease;
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: var(--spacing-24) var(--spacing-20);
+    max-height: 87px;
+  }
+
+  header img {
+    width: 112px;
+  }
+
+  header .lang-selector {
+    font-size: var(--font-size-14);
+    padding-block: 0;
+  }
+
+  header .lang-selector .selected img {
+    width: var(--spacing-16);
+  }
+
+  header .lang-selector .list {
+    top: 110%;
+    padding: var(--spacing-10) var(--spacing-20);
+  }
+
+  header .lang-selector .list li:not(:last-child) {
+    margin-bottom: var(--spacing-10);
+  }
+
+  header .lang-selector + .button {
+    display: none;
+  }
+}
