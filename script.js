@@ -100,6 +100,30 @@ $(() => {
     once: true,
   });
 
+  //Gsap | Personal section
+  ScrollTrigger.create({
+    trigger: ".personal-section",
+    start: "center bottom",
+    end: "center bottom",
+    toggleClass: {
+      targets: ".personal-section",
+      className: "show-content",
+    },
+    once: true,
+  });
+
+  //Gsap | Chat section
+  ScrollTrigger.create({
+    trigger: ".chat-section",
+    start: "center bottom",
+    end: "center bottom",
+    toggleClass: {
+      targets: ".chat-section",
+      className: "show-content",
+    },
+    once: true,
+  });
+
   gsap.to(".robo", {
     x: "-100%",
     duration: 2,

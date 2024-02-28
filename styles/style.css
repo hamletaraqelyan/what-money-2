@@ -488,6 +488,9 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: transform 2s ease 2s, opacity 2s ease 2s;
 }
 
 .personal-section .iphone {
@@ -496,6 +499,9 @@
   background: url("../public/media/images/personal/iphone.png") no-repeat 69%
     center/contain;
   position: relative;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform 2s ease, opacity 2s ease;
 }
 
 .personal-section .iphone .parallax-element {
@@ -511,6 +517,16 @@
   left: 39.5%;
   transition: transform 1s ease-out;
   will-change: transform;
+}
+
+.personal-section.show-content h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.personal-section.show-content .iphone {
+  opacity: 1;
+  transform: translateY(0);
 }
 /* personal section */
 
@@ -541,12 +557,18 @@
   font-weight: 500;
   line-height: 100%;
   letter-spacing: -2px;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: transform 2s ease 2s, opacity 2s ease 2s;
 }
 
 .chat-section .iphones {
   margin-top: -6.5%;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: transform 2s ease, opacity 2s ease;
 }
 
 .chat-section .iphones .parallax-element {
@@ -559,6 +581,9 @@
 }
 
 .chat-section .chat-icon {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: transform 2s ease 4s, opacity 2s ease 4s;
   width: var(--spacing-130);
   position: absolute;
   bottom: 7%;
@@ -567,6 +592,9 @@
 }
 
 .chat-section .bot-icon {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: transform 2s ease 4s, opacity 2s ease 4s;
   height: 5.2vw;
   position: absolute;
   bottom: 9.6%;
@@ -575,6 +603,9 @@
 }
 
 .chat-section .user-icon {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: transform 2s ease 4s, opacity 2s ease 4s;
   position: absolute;
   width: 17.5vw;
   bottom: 23.6%;
@@ -582,10 +613,25 @@
 }
 
 .chat-section .conversation-icon {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: transform 2s ease 4s, opacity 2s ease 4s;
   position: absolute;
   width: 32.8vw;
   bottom: 41.5%;
   right: 5.9%;
+}
+
+.chat-section.show-content
+  :where(.chat-icon, .bot-icon, .user-icon, .conversation-icon) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.chat-section.show-content h2,
+.chat-section.show-content .iphones {
+  opacity: 1;
+  transform: translateY(0);
 }
 /* chat section */
 
