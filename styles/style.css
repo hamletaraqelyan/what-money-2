@@ -160,18 +160,22 @@
 
 .animated-cards .cards-wrapper .card-item:nth-of-type(2) {
   background-image: url("../public/media/images/animatedCards/card2.png");
+  background-size: 90%;
 }
 
 .animated-cards .cards-wrapper .card-item:nth-of-type(3) {
   background-image: url("../public/media/images/animatedCards/card3.png");
+  background-size: 70%;
 }
 
 .animated-cards .cards-wrapper.rightAligned .card-item:nth-of-type(1) {
   background-image: url("../public/media/images/animatedCards/card4.png");
+  background-size: 65%;
 }
 
 .animated-cards .cards-wrapper.rightAligned .card-item:nth-of-type(2) {
   background-image: url("../public/media/images/animatedCards/card5.png");
+  background-size: 56.5%;
 }
 
 .animated-cards .cards-wrapper .card-item img {
@@ -186,7 +190,7 @@
 } */
 
 .animated-cards .cards-wrapper .card-item p {
-  font-size: var(--font-size-32);
+  font-size: var(--font-size-30);
   font-weight: 500;
   color: var(--text-body);
 }
