@@ -55,8 +55,16 @@ footer .bottom p {
 }
 
 @media (max-width: 480px) {
+  footer {
+    margin-bottom: 20px;
+  }
+
   footer .top {
     padding: var(--spacing-48) var(--spacing-48) var(--spacing-32);
+  }
+
+  footer p {
+    font-size: var(--font-size-14);
   }
 
   footer .top img {
@@ -74,6 +82,7 @@ footer .bottom p {
 
   footer .top .follow-us .socials a {
     width: var(--spacing-18);
+    min-width: unset;
   }
 
   footer .bottom {

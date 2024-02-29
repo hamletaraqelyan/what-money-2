@@ -3,6 +3,10 @@ $(() => {
   //   $(window).scrollTop(0);
   // });
 
+  // function hasEnPath() {
+  //   return window.location.href.indexOf("/en") !== -1;
+  // }
+
   // Banner text animation
   $(".animateText").each(function () {
     var textWrapper = $(this);
@@ -58,6 +62,17 @@ $(() => {
     duration: 2000,
     delay: (el, i) => 4000 + 30 * i,
   });
+
+  $(".bannerText5")[0] &&
+    anime.timeline({ loop: false }).add({
+      targets: ".bannerText5 .letter",
+      translateY: [200, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 5000 + 30 * i,
+    });
   // Banner text animation
 
   //Gsap | Digital revolution

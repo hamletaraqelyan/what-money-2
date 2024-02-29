@@ -118,17 +118,18 @@ input {
 @media (max-width: 480px) {
   body {
     padding-inline: 6px;
+    padding-block: 0;
   }
 
   main {
-    padding-top: calc(var(--header-height) + var(--spacing-25));
+    padding-top: var(--spacing-6);
   }
 
   .mb-120 {
     margin-bottom: var(--spacing-50);
   }
 
-  .mb-70 {
+  .mb-60 {
     margin-bottom: var(--spacing-20);
   }
 }
