@@ -14,7 +14,18 @@ header {
 
 header img {
   width: 10vw;
-  /* filter: drop-shadow(30px 10px 4px #4444dd); */
+}
+
+header img {
+  filter: drop-shadow(0 0 2px #0000007a);
+}
+
+header button {
+  box-shadow: 0 0 3px #00000040;
+}
+
+header .lang-selector .selected {
+  text-shadow: 0 0 5px #0000007a;
 }
 
 header .lang-selector {
@@ -41,6 +52,7 @@ header .lang-selector .selected img {
 }
 
 header .lang-selector .list {
+  box-shadow: 0 0 3px #00000040;
   background-color: var(--bg-white);
   position: absolute;
   border-radius: 20px;

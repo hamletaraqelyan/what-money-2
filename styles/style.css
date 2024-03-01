@@ -842,3 +842,267 @@
   background: url("../public/media/images/roadmap/RoadmapRu.svg") no-repeat
     center/cover;
 }
+
+/* form-section */
+.form-section {
+  margin-top: var(--spacing-120);
+  display: flex;
+}
+
+.form-section .exchange {
+  width: 44.5%;
+  padding: var(--spacing-120) var(--spacing-120) var(--spacing-120)
+    var(--spacing-90);
+}
+
+.form-section .exchange .exchange-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-block: var(--spacing-36) var(--spacing-100);
+}
+
+.form-section .exchange .exchange-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid var(--bg-seperator);
+  border-radius: var(--block-border-radius-xxs);
+  padding: var(--spacing-27) var(--spacing-36);
+}
+
+.form-section .exchange .exchange-card#exchangeWrapperSecond {
+  padding-block: var(--spacing-20);
+}
+
+.form-section .exchange .exchange-card:not(:last-of-type) {
+  margin-bottom: var(--spacing-12);
+}
+
+.form-section .exchange .exchange-card .inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  position: relative;
+}
+
+.form-section .exchange .exchange-card .inputWrapper span {
+  font-size: var(--font-size-20);
+  font-weight: 500;
+  margin-bottom: 2.5%;
+}
+
+.form-section .exchange .exchange-card .inputWrapper input {
+  color: var(--text-title-black);
+  font-size: var(--font-size-40);
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2px;
+}
+
+.form-section
+  .exchange
+  .exchange-card
+  .inputWrapper
+  input::-webkit-outer-spin-button,
+.form-section
+  .exchange
+  .exchange-card
+  .inputWrapper
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form-section .exchange .exchange-card .inputWrapper input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-section .exchange .exchange-card .currency-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.form-section .exchange .exchange-card .currency-wrapper .currency-name {
+  font-size: var(--font-size-28);
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--text-caption);
+}
+
+.form-section .exchange .exchange-card .currency-wrapper img {
+  width: var(--spacing-64);
+  margin-right: var(--spacing-18);
+}
+
+.form-section .exchange .exchange-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: var(--spacing-40);
+  font-size: 0;
+  animation: float 2s ease-in-out alternate infinite;
+}
+
+@keyframes float {
+  form {
+    transform: translate(-50%, calc(-50% + 7px));
+  }
+
+  to {
+    transform: translate(-50%, calc(-50% - 7px));
+  }
+}
+
+.form-section .exchange .exchange-button img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.form-section .contract-notice {
+  border-radius: 16px;
+  background: #e9f3ff url("../public/media/images/exchange/handiPhone.png")
+    no-repeat right bottom/52%;
+  padding: var(--spacing-36);
+  padding-right: 34%;
+}
+
+.form-section .contract-notice h4 {
+  font-size: var(--font-size-30);
+  font-weight: 500;
+  line-height: 100%; /* 30px */
+  letter-spacing: -1px;
+}
+
+.form-section .contract-notice p {
+  color: var(--text-body);
+  font-size: var(--font-size-18);
+  font-weight: 400;
+  line-height: 160%;
+  margin-block: var(--spacing-14) var(--spacing-24);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.form-section .contract-notice button {
+  color: var(--text-title-blue);
+  font-size: var(--font-size-20);
+  font-weight: 500;
+  line-height: 160%;
+  padding-right: var(--spacing-27);
+  cursor: pointer;
+  position: relative;
+}
+
+.form-section .contract-notice button:hover::after {
+  transform: translate(20%, -70%);
+}
+
+.form-section .contract-notice button::after {
+  content: "";
+  width: var(--spacing-24);
+  height: var(--spacing-24);
+  background: url("../public/media/images/exchange/arrowUpRight.svg") no-repeat
+    center/contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -2%;
+  transition: transform 0.4s ease;
+}
+
+.form-section .exchange h3 {
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -1px;
+  font-size: var(--font-size-56);
+}
+
+.form-section .form {
+  width: 55.5%;
+  padding: var(--spacing-120) 0;
+  background-color: #f9fafb;
+  border-radius: var(--block-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-section .form form {
+  border-radius: var(--block-border-radius);
+  background-color: var(--bg-white);
+  padding: var(--spacing-64) var(--spacing-36);
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section .form form label {
+  color: var(--text-body);
+  font-size: var(--font-size-18);
+  font-weight: 500;
+}
+
+.form-section .form form input {
+  margin-block: var(--spacing-10) var(--spacing-24);
+  font-size: var(--font-size-18);
+  font-weight: 500;
+  color: var(--text-body);
+  border-radius: 8px;
+  border: 1px solid var(--bg-seperator);
+  padding: var(--spacing-20) var(--spacing-24);
+  transition: outline 0.3s ease;
+  will-change: outline;
+}
+
+label.error-message {
+  display: none !important;
+}
+
+.form-section .form form input:focus {
+  outline: 3px solid #e8defb;
+}
+
+.form-section .form form input.error-message {
+  border-color: #d80027;
+}
+
+.form-section .form form input:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-section .form form input::placeholder {
+  color: var(--text-caption);
+  font-weight: 400;
+}
+
+.form-section .form form :where(p, p a) {
+  color: var(--text-caption);
+  font-weight: 400;
+  font-size: var(--font-size-16);
+  text-align: center;
+}
+
+.form-section .form form p a {
+  text-decoration: underline;
+}
+
+.form-section .form form p {
+  margin-block: var(--spacing-28) var(--spacing-16);
+}
+
+.form-section .form form button {
+  font-size: var(--font-size-18);
+}
+
+.form-section .form form button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

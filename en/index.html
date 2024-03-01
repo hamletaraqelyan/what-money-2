@@ -179,22 +179,23 @@
       </section>
       <section class="gsap-container-mobile">
         <div class="robo-human">
-          <h3>
-            From manual processing <br />to the
-            <span class="text-blue">digital</span> revolution
+          <h3 class="text-white-180-gradient">
+            From manual processing
+            to the digital
+            revolution
           </h3>
-          <img src="../public/media/images/robo-human.png" alt="Robo Human" />
+          <img src="../public/media/images/roboHuman/roboHumanHandsMobile.png" alt="Robo Human" />
           <p>
-            Experience the future of finance with secure and informed currency
-            transactions right in the palm of your hand.
+            Explore the future of finance with secure and controlled currency transfers right in the palm of your hand
           </p>
+          <button class="button">Invest</button>
         </div>
         <div class="spiral">
           <div class="text-block">
-            <h3>24/7 Security</h3>
-            <p>We monitor and control the safety and security of your money</p>
-            <button class="button">Get started</button>
+            <h3 class="text-white-180-gradient">The first IT platform in the U.S. for <span class="text-blue-gradient">fast and secure</span> online customer transactions
+          </h3>
           </div>
+          <div class="phoneImage"></div>
         </div>
       </section>
 
@@ -256,6 +257,75 @@
 
       <section class="roadmap mb-60">
       </section>
+
+      <section class="form-section">
+        <div class="exchange">
+          <h3>
+            Enter the amount you want <span class="text-blue">to invest</span>
+          </h3>
+          <div class="exchange-wrapper">
+            <div class="exchange-card" id="exchangeWrapperFirst">
+              <div class="inputWrapper" id="inputWrapperFirst">
+                <input type="number" value="100.000"/>
+              </div>
+              <div class="currency-wrapper">
+                <img
+                class="currency-image"
+                src="../public/media/images/exchange/rub.svg"
+                alt="RUB icon"
+                />
+                <p class="currency-name">RUB</p>
+              </div>
+            </div>
+            <button class="exchange-button" id="switch-currencies">
+              <img src="../public/media/images/exchange/arrowDownIcon.svg" alt="arrow down icon" />
+            </button>
+            <div class="exchange-card" id="exchangeWrapperSecond">
+              <div class="inputWrapper" id="inputWrapperSecond">
+                <span class="text-blue">Exchange rate</span>
+                <input type="number" value="1083.00"/>
+              </div>
+              <div class="currency-wrapper">
+                <img
+                  class="currency-image"
+                  src="../public/media/images/exchange/usd.svg"
+                  alt="USD icon"
+                  />
+                  <p class="currency-name">USD</p>
+              </div>
+            </div>
+          </div>
+          <div class="contract-notice">
+            <h4>To proceed, kindly read the agreement</h4>
+            <p>This loan agreement is drafted and concluded between the Lender, What Money Corporation, in accordance with...</p>
+            <button>Continue reading</button>
+          </div>
+        </div>
+        <div class="form">
+          <form id="invest-form" action="#" >
+              <label for="firstname">First name<span class="text-blue">*</span></label>
+              <input type="text" name="firstname" id="firstname" placeholder="Enter your first name">
+
+              <label for="lastname">Last name<span class="text-blue">*</span></label>
+              <input type="text" name="lastname" id="lastname" placeholder="Enter your last name">
+
+              <label for="address">Address<span class="text-blue">*</span></label>
+              <input type="text" name="address" id="address" placeholder="Enter your address">
+
+              <label for="passportnumber">Passport number<span class="text-blue">*</span></label>
+              <input type="text" name="passportnumber" id="passportnumber" placeholder="Enter your passport number">
+              
+              <label for="email">Email<span class="text-blue">*</span></label>
+              <input type="text" name="email" id="email" placeholder="Enter your email address">
+
+              <p class="info-notice">
+                By continuing, you agree to our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>
+              </p>
+
+              <button type="submit" class="button">Invest</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -309,5 +379,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
     <script src="../script.js"></script>
+    <script src="../app/form-submit.js"></script>
   </body>
 </html>

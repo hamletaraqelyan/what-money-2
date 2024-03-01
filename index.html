@@ -266,6 +266,76 @@
 
       <section class="roadmap ru mb-60">
       </section>
+
+      <section class="form-section">
+        <div class="exchange">
+          <h3>
+            Введите сумму,<br> которую вы хотите <br> <span class="text-blue">инвестировать</span>
+          </h3>
+          <div class="exchange-wrapper">
+            <div class="exchange-card" id="exchangeWrapperFirst">
+              <div class="inputWrapper" id="inputWrapperFirst">
+                <input type="number" value="100.000"/>
+              </div>
+              <div class="currency-wrapper">
+                <img
+                class="currency-image"
+                src="./public/media/images/exchange/rub.svg"
+                alt="RUB icon"
+                />
+                <p class="currency-name">RUB</p>
+              </div>
+            </div>
+            <button class="exchange-button" id="switch-currencies">
+              <img src="./public/media/images/exchange/arrowDownIcon.svg" alt="arrow down icon" />
+            </button>
+            <div class="exchange-card" id="exchangeWrapperSecond">
+              <div class="inputWrapper" id="inputWrapperSecond">
+                <span class="text-blue">Конвертируемый курс</span>
+                <input type="number" value="1083.00"/>
+              </div>
+              <div class="currency-wrapper">
+                <img
+                  class="currency-image"
+                  src="./public/media/images/exchange/usd.svg"
+                  alt="USD icon"
+                  />
+                  <p class="currency-name">USD</p>
+              </div>
+            </div>
+          </div>
+          <div class="contract-notice">
+            <h4>Чтобы продолжить, ознакомтесь с договором</h4>
+            <p>Настоящий Договор займа составлен и заключен, между: Займодавец: What Money Inc., корпорацией, в надлежащем порядке учрежденной и осуществляющей свою деятельность в соответствии сзаконодательством штата Флорида, с основным местом ведения бизнеса, расположенным по адресу: 101 DiplomatParkway, Hallandale Beach, Florida, USA
+              Генеральный директор займодавца: Антон Залис</p>
+            <button>Прочитать полностью</button>
+          </div>
+        </div>
+        <div class="form">
+          <form id="invest-form" action="#" >
+              <label for="firstname">Имя<span class="text-blue">*</span></label>
+              <input type="text" name="firstname" id="firstname" placeholder="Введите ваше имя">
+
+              <label for="lastname">Фамилия<span class="text-blue">*</span></label>
+              <input type="text" name="lastname" id="lastname" placeholder="Введите вашу фамилию">
+
+              <label for="address">Адрес<span class="text-blue">*</span></label>
+              <input type="text" name="address" id="address" placeholder="Введите ваш адрес">
+
+              <label for="passportnumber">Номер паспорта<span class="text-blue">*</span></label>
+              <input type="text" name="passportnumber" id="passportnumber" placeholder="Введите ваш номер паспорта">
+              
+              <label for="email">Электронная почта<span class="text-blue">*</span></label>
+              <input type="text" name="email" id="email" placeholder="Введите вашу электронную почту">
+
+              <p class="info-notice">
+                Продолжая, вы соглашаетесь с нашим <a href="#">Пользовательским соглашением</a> и <a href="#">Политикой конфиденциальности.</a>
+              </p>
+
+              <button type="submit" class="button">Инвестировать</button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -319,5 +389,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
     <script src="./script.js"></script>
+    <script src="./app/form-submit.js"></script>
   </body>
 </html>
