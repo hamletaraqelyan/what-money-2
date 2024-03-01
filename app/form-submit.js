@@ -10,6 +10,10 @@ $(() => {
         required: true,
         minlength: 2,
       },
+      fathersname: {
+        required: true,
+        minlength: 2,
+      },
       address: {
         required: true,
         minlength: 2,
@@ -31,7 +35,9 @@ $(() => {
       $(form)
         .find("input")
         .each(function () {
-          formData[$(this).attr("name")] = $(this).val();
+          if ($(this).attr("name")) {
+            formData[$(this).attr("name")] = $(this).val();
+          }
         });
 
       console.log(formData);
