@@ -843,6 +843,10 @@
     center/cover;
 }
 
+.roadmap-mobile {
+  display: none;
+}
+
 /* form-section */
 .form-section {
   margin-top: var(--spacing-120);
@@ -1044,6 +1048,10 @@
   flex-direction: column;
 }
 
+.form-section .form form .contract-notice {
+  display: none;
+}
+
 .form-section .form form label {
   color: var(--text-body);
   font-size: var(--font-size-18);
@@ -1098,7 +1106,7 @@ label.error-message {
   margin-block: var(--spacing-28) var(--spacing-16);
 }
 
-.form-section .form form button {
+.form-section .form form button.button {
   font-size: var(--font-size-18);
 }
 

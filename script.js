@@ -3,9 +3,9 @@ $(() => {
   //   $(window).scrollTop(0);
   // });
 
-  // function hasEnPath() {
-  //   return window.location.href.indexOf("/en") !== -1;
-  // }
+  function hasEnPath() {
+    return window.location.href.indexOf("/en") !== -1;
+  }
 
   // Banner text animation
   $(".animateText").each(function () {
@@ -15,16 +15,86 @@ $(() => {
     );
   });
 
-  anime
-    .timeline({ loop: false })
-    .add({
-      targets: ".animateText",
+  if (!hasEnPath()) {
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: ".animateText",
+        opacity: [0, 1],
+        easing: "linear",
+        duration: 100,
+      })
+      .add({
+        targets: ".bannerText1 .letter",
+        translateY: [200, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 2000,
+        delay: (el, i) => 2000 + 30 * i,
+      });
+
+    anime.timeline({ loop: false }).add({
+      targets: ".bannerText2 .letter",
+      translateY: [200, 0],
+      translateZ: 0,
       opacity: [0, 1],
-      easing: "linear",
-      duration: 100,
-    })
-    .add({
-      targets: ".bannerText1 .letter",
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 2500 + 30 * i,
+    });
+
+    anime.timeline({ loop: false }).add({
+      targets: ".bannerText3 .letter",
+      translateY: [200, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 3000 + 30 * i,
+    });
+
+    anime.timeline({ loop: false }).add({
+      targets: ".bannerText4 .letter",
+      translateY: [200, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 4000 + 30 * i,
+    });
+
+    $(".bannerText5")[0] &&
+      anime.timeline({ loop: false }).add({
+        targets: ".bannerText5 .letter",
+        translateY: [200, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 2000,
+        delay: (el, i) => 5000 + 30 * i,
+      });
+  } else {
+    anime
+      .timeline({ loop: false })
+      .add({
+        targets: ".animateText",
+        opacity: [0, 1],
+        easing: "linear",
+        duration: 100,
+      })
+      .add({
+        targets: ".bannerText1 .letter",
+        translateY: [200, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 2000,
+        delay: (el, i) => 1500 + 30 * i,
+      });
+
+    anime.timeline({ loop: false }).add({
+      targets: ".bannerText2 .letter",
       translateY: [200, 0],
       translateZ: 0,
       opacity: [0, 1],
@@ -33,46 +103,37 @@ $(() => {
       delay: (el, i) => 2000 + 30 * i,
     });
 
-  anime.timeline({ loop: false }).add({
-    targets: ".bannerText2 .letter",
-    translateY: [200, 0],
-    translateZ: 0,
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 2000,
-    delay: (el, i) => 2500 + 30 * i,
-  });
-
-  anime.timeline({ loop: false }).add({
-    targets: ".bannerText3 .letter",
-    translateY: [200, 0],
-    translateZ: 0,
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 2000,
-    delay: (el, i) => 3000 + 30 * i,
-  });
-
-  anime.timeline({ loop: false }).add({
-    targets: ".bannerText4 .letter",
-    translateY: [200, 0],
-    translateZ: 0,
-    opacity: [0, 1],
-    easing: "easeOutExpo",
-    duration: 2000,
-    delay: (el, i) => 4000 + 30 * i,
-  });
-
-  $(".bannerText5")[0] &&
     anime.timeline({ loop: false }).add({
-      targets: ".bannerText5 .letter",
+      targets: ".bannerText3 .letter",
       translateY: [200, 0],
       translateZ: 0,
       opacity: [0, 1],
       easing: "easeOutExpo",
       duration: 2000,
-      delay: (el, i) => 5000 + 30 * i,
+      delay: (el, i) => 2500 + 30 * i,
     });
+
+    anime.timeline({ loop: false }).add({
+      targets: ".bannerText4 .letter",
+      translateY: [200, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 2000,
+      delay: (el, i) => 2500 + 30 * i,
+    });
+
+    $(".bannerText5")[0] &&
+      anime.timeline({ loop: false }).add({
+        targets: ".bannerText5 .letter",
+        translateY: [200, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 2000,
+        delay: (el, i) => 4000 + 30 * i,
+      });
+  }
   // Banner text animation
 
   //Gsap | Digital revolution

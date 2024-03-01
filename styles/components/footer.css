@@ -57,6 +57,7 @@ footer .bottom p {
 @media (max-width: 480px) {
   footer {
     margin-bottom: 20px;
+    margin-top: var(--spacing-36);
   }
 
   footer .top {

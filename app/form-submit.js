@@ -24,7 +24,7 @@ $(() => {
       },
     },
     submitHandler: (form) => {
-      const submitButton = $(form).find("button");
+      const submitButton = $(form).find('button[type="submit"]');
       submitButton.prop("disabled", true);
 
       const formData = {};

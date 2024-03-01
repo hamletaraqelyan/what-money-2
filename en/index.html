@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="../styles/components/footer.css" />
 
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/styles.mobile.css" />
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -92,14 +93,24 @@
     <main>
       <section class="banner-section en mb-60">
         <div class="content">
-            <img src="../public/media/icons/whatmoney-white-logo.svg" alt="">
-            <br>
-            <h1 class="animateText bannerText1">Discover</h1>
-            <h1 class="text-blue animateText bannerText2">investing</h1>
-            <h1 class="animateText bannerText3">in innovative</h1>
-            <h1 class="animateText bannerText4">financial services with WhatMoney.</h1>
-            <button class="button">Invest</button>
+          <img src="../public/media/icons/whatmoney-white-logo.svg" alt="">
+          <br>
+          <h1 class="animateText bannerText1">Discover</h1>
+          <h1 class="text-blue animateText bannerText2">investing</h1>
+          <h1 class="animateText bannerText3">in innovative</h1>
+          <h1 class="animateText bannerText4">financial services with WhatMoney.</h1>
+          <button class="button">Invest</button>
         </div>
+        <div class="content-mobile">
+          <img src="../public/media/icons/whatmoney-white-logo.svg" alt="">
+          <br>
+          <h1 class="animateText bannerText1">Discover</h1>
+          <h1 class="text-blue animateText bannerText2">investing</h1>
+          <h1 class="animateText bannerText3">in innovative</h1>
+          <h1 class="animateText bannerText4">financial services</h1>
+          <h1 class="animateText bannerText5">with WhatMoney.</h1>
+          <button class="button">Invest</button>
+      </div>
         <img class="bannerGlobe" src="../public/media/images/banner/bannerGlobe.png" alt="">
       </section>
 
@@ -257,7 +268,18 @@
 
       <section class="roadmap mb-60">
       </section>
-
+      <section class="roadmap-mobile en mb-60">
+        <h3>Roadmap</h3>
+        <div class="mapImage">
+          <img src="../public/media/images/roadmap/roadmapMobileEn.svg" alt="Roadmap">
+        </div>
+        <div class="indicators">
+          <p class="development">Development</p>
+          <p class="design">Design</p>
+          <p class="marketing">Marketing</p>
+        </div>
+      </section>
+      
       <section class="form-section">
         <div class="exchange">
           <h3>
@@ -317,6 +339,12 @@
               
               <label for="email">Email<span class="text-blue">*</span></label>
               <input type="text" name="email" id="email" placeholder="Enter your email address">
+
+              <div class="contract-notice">
+                <h4>To proceed, kindly read the agreement</h4>
+                <p>This loan agreement is drafted and concluded between the Lender, What Money Corporation, in accordance with...</p>
+                <button>Continue reading</button>
+              </div>
 
               <p class="info-notice">
                 By continuing, you agree to our <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>
