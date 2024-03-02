@@ -200,6 +200,15 @@ $(() => {
     once: true,
   });
 
+  //Gsap | Header section
+  ScrollTrigger.create({
+    start: `top -${
+      $(".banner-section").height() - $("header").innerHeight() / 1.5
+    }`,
+    end: $("body").height(),
+    toggleClass: { className: "white-header", targets: ".header" },
+  });
+
   gsap.to(".robo", {
     x: "-100%",
     duration: 2,

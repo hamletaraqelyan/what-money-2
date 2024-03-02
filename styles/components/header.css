@@ -9,23 +9,29 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4.7vw 7.2vw;
+  padding: 2.7% 7.2%;
+  transform: translateY(35%);
+  transition: transform 0.5s ease 0.4s, background-color 0.5s ease;
 }
 
 header img {
   width: 10vw;
 }
 
-header img {
-  filter: drop-shadow(0 0 2px #0000007a);
+header .logoWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header button {
-  box-shadow: 0 0 3px #00000040;
+header .logoWrapper .blackLogo {
+  position: absolute;
+  left: 0;
 }
 
-header .lang-selector .selected {
-  text-shadow: 0 0 5px #0000007a;
+header .logoWrapper img {
+  transition: opacity 0.5s ease;
 }
 
 header .lang-selector {
@@ -42,13 +48,18 @@ header .lang-selector .selected {
   display: flex;
   align-items: center;
   color: var(--text-white-clear);
+  transition: color 0.5s ease;
 }
 
-header .lang-selector .selected img {
+header .lang-selector .selected svg {
   margin-left: 0.5vw;
   display: inline-block;
   width: 1vw;
   aspect-ratio: 1/1;
+}
+
+header .lang-selector .selected svg path {
+  transition: fill 0.5s ease;
 }
 
 header .lang-selector .list {
@@ -93,9 +104,43 @@ header .lang-selector:hover .list {
   transition: visibility 0.4s step-start, opacity 0.4s ease;
 }
 
+header button.white {
+  transition: color.5s ease, background-color 0.5s ease;
+}
+
+header .blackLogo {
+  opacity: 0;
+}
+
+header.white-header {
+  transform: translateY(0);
+  background-color: white;
+  transition: transform 0.5s ease, background-color 0.5s ease 0.4s;
+}
+
+header.white-header .blackLogo {
+  opacity: 1;
+}
+
+header.white-header .whiteLogo {
+  opacity: 0;
+}
+
+header.white-header .lang-selector .selected {
+  color: var(--text-dark);
+}
+
+header.white-header .lang-selector .selected svg path {
+  fill: var(--text-dark);
+}
+
+header.white-header button.white {
+  color: var(--text-white-clear);
+  background-color: var(--text-dark);
+}
+
 @media (max-width: 480px) {
   header {
-    max-height: unset;
     padding: var(--spacing-30) var(--spacing-24);
   }
 
@@ -109,7 +154,7 @@ header .lang-selector:hover .list {
     margin-right: 0;
   }
 
-  header .lang-selector .selected img {
+  header .lang-selector .selected svg {
     width: var(--spacing-16);
   }
 

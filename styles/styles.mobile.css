@@ -290,6 +290,7 @@
 
   .the-future-arrived .content-block .scalable-element {
     overflow: hidden;
+    background-image: url("../public/media/images/futureArrivedGlobeMobile.png");
   }
 
   .the-future-arrived .content-block .scalable-element .text-box {
@@ -316,7 +317,7 @@
 
   .gsap-container-mobile {
     display: block;
-    margin-bottom: var(--spacing-64);
+    margin-bottom: 20px;
   }
 
   .gsap-container-mobile .robo-human {
@@ -437,6 +438,10 @@
     padding: var(--spacing-20) var(--spacing-16);
   }
 
+  .form-section .exchange .exchange-card#exchangeWrapperSecond {
+    padding-block: 13.9px;
+  }
+
   .form-section .exchange .exchange-button {
     width: var(--spacing-32);
   }
@@ -480,6 +485,7 @@
     display: block;
     margin-top: var(--spacing-20);
     padding: var(--spacing-24);
+    background-image: none;
   }
 
   .form-section .contract-notice p {
