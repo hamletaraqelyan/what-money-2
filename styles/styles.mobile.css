@@ -272,6 +272,7 @@
 
   .animated-cards .cards-wrapper.rightAligned .card-item:nth-of-type(2) {
     background-size: 55%;
+    margin-bottom: 0;
   }
   /* animated cards block */
 
