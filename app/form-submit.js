@@ -18,7 +18,7 @@ $(() => {
         required: true,
         minlength: 2,
       },
-      passportnumber: {
+      passportNumber: {
         required: true,
         minlength: 2,
       },
@@ -26,8 +26,12 @@ $(() => {
         required: true,
         email: true,
       },
+      language: {
+        required: true,
+      },
     },
-    submitHandler: (form) => {
+    submitHandler: (form, event) => {
+      event.preventDefault();
       const submitButton = $(form).find('button[type="submit"]');
       submitButton.prop("disabled", true);
 
@@ -40,22 +44,48 @@ $(() => {
           }
         });
 
-      console.log(formData);
-      // const url = "https://whatmoneyapi.azurewebsites.net/user";
+      const generateName = (formData) => {
+        return `${formData.lastname} ${formData.firstname}${
+          formData.fathersname ? " " + formData.fathersname : ""
+        }`;
+      };
 
-      // $.ajax({
-      //   url: url,
-      //   type: "POST",
-      //   contentType: "application/json",
-      //   data: JSON.stringify(formData),
-      //   success: () => {
-      //     $("#submit-form").prop("disabled", false);
-      //     $(form).trigger("reset");
-      //   },
-      //   error: function (jqXHR, textStatus, errorThrown) {
-      //     console.error("Error:", errorThrown);
-      //   },
-      // });
+      const requestBody = {
+        ...formData,
+        loanValue: +$("#inputWrapperSecond input").val(),
+        returnUrl: `https://what-money-invest.netlify.app/`,
+        name: generateName(formData),
+      };
+
+      delete requestBody.firstname;
+      delete requestBody.lastname;
+      delete requestBody.fathersname;
+
+      const url = "https://whatmoneyapi.azurewebsites.net/api/Document";
+
+      $.ajax({
+        url: url,
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(requestBody),
+        success: (response) => {
+          submitButton.prop("disabled", false);
+          $(form).trigger("reset");
+          showDocument(response.url);
+          addQuery("doc", response.url);
+
+          // window.open(`${window.location.href}?doc=${response.url}`, "_blank");
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error("Error:", errorThrown);
+        },
+      });
     },
   });
+
+  // $("#thank-you-popup").modal({
+  //   fadeDuration: 250,
+  //   escapeClose: false,
+  //   clickClose: false,
+  // });
 });

@@ -205,7 +205,7 @@ $(() => {
     start: `top -${
       $(".banner-section").height() - $("header").innerHeight() / 1.5
     }`,
-    end: $("body").height(),
+    end: $("body").height() * 1.5,
     toggleClass: { className: "white-header", targets: ".header" },
   });
 

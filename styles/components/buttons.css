@@ -36,6 +36,12 @@
   min-width: 6rem;
 }
 
+.button.small {
+  font-size: var(--font-size-18);
+  font-weight: 500;
+  padding: 0.7vw 1.4vw;
+}
+
 @media (max-width: 480px) {
   .button {
     padding: var(--spacing-12) var(--spacing-32);
