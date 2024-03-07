@@ -13,7 +13,7 @@ const showDocument = (docUrl) => {
   $("body").css("overflow", "hidden");
 };
 
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.has("doc")) {
-  showDocument(urlParams.get("doc"));
-}
+// const urlParams = new URLSearchParams(window.location.search);
+// if (urlParams.has("doc")) {
+//   showDocument(urlParams.get("doc"));
+// }

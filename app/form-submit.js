@@ -72,7 +72,7 @@ $(() => {
           submitButton.prop("disabled", false);
           $(form).trigger("reset");
           showDocument(response.url);
-          addQuery("doc", response.url);
+          // addQuery("doc", response.url);
 
           // window.open(`${window.location.href}?doc=${response.url}`, "_blank");
         },
