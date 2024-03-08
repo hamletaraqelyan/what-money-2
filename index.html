@@ -369,8 +369,6 @@
 
               <button type="submit" class="button">Инвестировать</button>
           </form>
-
-          <!-- <iframe src="" id="docusignFrame" style="height:200px;width:300px;" title="Iframe Example"></iframe> -->
         </div>
       </section>
     </main>
@@ -414,23 +412,21 @@
       </div>
     </footer>
 
-    <div id="loader">
-        <iframe src="" frameborder="0" id="docusignFrame"></iframe>
-    </div>
+    <div id="loader"></div>
 
     <div id="thank-you-popup" class="thank-you-popup">
       <img src="./public/media/icons/document.svg" alt="Document icon">
-      <h3>Ваш договор был<br> успешно отправлен на<br> почту example@gmail.com</h3>
-      <button class="button"><img src="./public/media/icons/open.svg" alt="Open link"> Открыть</button>
-      <button class="button light" ><img src="./public/media/icons/print.svg" alt="Print document"> Распечатать</button>
+      <h3>Ваш договор был<br> успешно отправлен на<br> почту <span id="investorEmail">example@gmail.com</span></h3>
+      <a class="button loading" id="downloadDocument" download><img src="./public/media/icons/open.svg" alt="Open link"> Открыть</a>
+      <a class="button light loading" id="printDocument" target="_blank"><img src="./public/media/icons/print.svg" alt="print document"> Распечатать</a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <script src="./app/init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
     <script src="./script.js"></script>
     <script src="./app/form-submit.js"></script>

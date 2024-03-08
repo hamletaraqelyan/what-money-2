@@ -1,6 +1,7 @@
 .jquery-modal {
   z-index: 100;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
+  background-color: rgba(9, 9, 9, 0.5);
 }
 
 .thank-you-popup {
@@ -19,9 +20,9 @@
 
 .thank-you-popup h3 {
   color: var(--text-title-black);
-  font-size: var(--font-size-24);
+  font-size: 1.1vw;
   font-weight: 600;
-  margin-block: var(--spacing-16) var(--spacing-20);
+  margin: var(--spacing-16) 0 var(--spacing-20) 0;
 }
 
 .thank-you-popup a.close-modal {
@@ -40,6 +41,21 @@
   justify-content: center;
 }
 
+.thank-you-popup .button.loading {
+  pointer-events: none;
+  animation: opacity 1s ease infinite alternate;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.8;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
 .thank-you-popup .button img {
   width: var(--spacing-20);
   margin-right: var(--spacing-8);
@@ -52,11 +68,7 @@
 @media (max-width: 480px) {
   .thank-you-popup {
     width: 100%;
-    padding: var(--spacing-42) var(--spacing-20);
-  }
-
-  .thank-you-popup {
-    padding-top: var(--spacing-238);
+    padding: var(--spacing-24) var(--spacing-16);
   }
 
   .thank-you-popup.ru {
@@ -64,7 +76,7 @@
   }
 
   .thank-you-popup h3 {
-    font-size: var(--font-size-26);
+    font-size: var(--font-size-18);
   }
 
   .thank-you-popup h3 br {
@@ -72,11 +84,20 @@
   }
 
   .thank-you-popup .button {
-    padding-block: var(--spacing-16);
+    padding: var(--spacing-12);
+    font-size: var(--font-size-16);
+  }
+
+  .thank-you-popup .button img {
+    margin-right: 8px;
+  }
+
+  .thank-you-popup .button:first-of-type {
+    margin-bottom: 8px;
   }
 
   .thank-you-popup a.close-modal {
-    top: var(--spacing-20);
-    right: var(--spacing-20);
+    top: var(--spacing-10);
+    right: var(--spacing-10);
   }
 }

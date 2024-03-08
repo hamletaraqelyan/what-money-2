@@ -53,7 +53,7 @@ $(() => {
       const requestBody = {
         ...formData,
         loanValue: +$("#inputWrapperSecond input").val(),
-        returnUrl: `https://what-money-invest.netlify.app/`,
+        returnUrl: `${window.location.href}`,
         name: generateName(formData),
       };
 
@@ -82,10 +82,4 @@ $(() => {
       });
     },
   });
-
-  // $("#thank-you-popup").modal({
-  //   fadeDuration: 250,
-  //   escapeClose: false,
-  //   clickClose: false,
-  // });
 });
