@@ -347,4 +347,61 @@ $(() => {
       });
     });
   });
+
+  //exchange
+  function roundToTwoDecimals(inputNumber) {
+    return inputNumber.toFixed(2);
+  }
+
+  const setFirstInputValue = (value) => {
+    $("#inputWrapperFirst input").val(value);
+  };
+
+  const setSecondInputValue = (value) => {
+    $("#inputWrapperSecond input").val(value);
+  };
+
+  fetch("https://whatmoneyapi.azurewebsites.net/currencies")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((fetchRates) => {
+      const firstInput = $("#inputWrapperFirst input");
+      const secondInput = $("#inputWrapperSecond input");
+      const fromRate = fetchRates.rub_usdt;
+      setFirstInputValue(100000);
+      setSecondInputValue(roundToTwoDecimals(100000 * fromRate));
+
+      firstInput.on("input", function () {
+        const val = +$(this).val();
+        const secondValue = val * fromRate;
+        setSecondInputValue(roundToTwoDecimals(secondValue));
+      });
+
+      secondInput.on("input", function () {
+        const val = +$(this).val();
+        const secondValue = val / fromRate;
+        setFirstInputValue(roundToTwoDecimals(secondValue));
+      });
+
+      firstInput.on("blur", function () {
+        if (+$(this).val() === 0 || $(this).val() === "") {
+          setFirstInputValue(100000);
+          setSecondInputValue(roundToTwoDecimals(100000 * fromRate));
+        }
+      });
+
+      secondInput.on("blur", function () {
+        if (+$(this).val() === 0 || $(this).val() === "") {
+          setFirstInputValue(100000);
+          setSecondInputValue(roundToTwoDecimals(100000 * fromRate));
+        }
+      });
+    })
+    .catch((error) => {
+      console.error("There was a problem with the fetch operation:", error);
+    });
 });

@@ -22,8 +22,10 @@ const generateIframeEl = (src) => {
 };
 
 const showDocument = (docUrl) => {
-  $("#loader").addClass("show");
-  $("#loader").html(generateIframeEl(docUrl));
+  $("#loader").append(generateIframeEl(docUrl));
+  $("#docusignFrame").on("load", function () {
+    $("#loader .spinner").fadeOut();
+  });
   $("body").css("overflow", "hidden");
 };
 
@@ -68,7 +70,6 @@ const checkPopup = () => {
 
 checkPopup();
 
-const docUrl = `https://whatmoneyapi.azurewebsites.net/api/Document/GetDocumentUrl/4894fa45-bc82-401a-a535-1c9df15d6a6b`;
 // $.ajax({
 //   url: docUrl,
 //   type: "GET",

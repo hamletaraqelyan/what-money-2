@@ -63,6 +63,7 @@ $(() => {
 
       const url = "https://whatmoneyapi.azurewebsites.net/api/Document";
 
+      $("#loader").addClass("show");
       $.ajax({
         url: url,
         type: "POST",
@@ -72,12 +73,10 @@ $(() => {
           submitButton.prop("disabled", false);
           $(form).trigger("reset");
           showDocument(response.url);
-          // addQuery("doc", response.url);
-
-          // window.open(`${window.location.href}?doc=${response.url}`, "_blank");
         },
         error: function (jqXHR, textStatus, errorThrown) {
           console.error("Error:", errorThrown);
+          $("#loader").removeClass("show");
         },
       });
     },
