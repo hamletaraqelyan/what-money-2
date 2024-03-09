@@ -96,7 +96,7 @@
           </li>
         </ul>
       </div>
-      <button class="button white">Invest</button>
+      <button class="button white scrollToForm">Invest</button>
     </div>
     </header>
 
@@ -109,7 +109,7 @@
           <h1 class="text-blue animateText bannerText2">investing</h1>
           <h1 class="animateText bannerText3">in innovative</h1>
           <h1 class="animateText bannerText4">financial services with WhatMoney.</h1>
-          <button class="button">Invest</button>
+          <button class="button scrollToForm">Invest</button>
         </div>
         <div class="content-mobile">
           <img src="../public/media/icons/whatmoney-white-logo.svg" alt="">
@@ -119,7 +119,7 @@
           <h1 class="animateText bannerText3">in innovative</h1>
           <h1 class="animateText bannerText4">financial services</h1>
           <h1 class="animateText bannerText5">with WhatMoney.</h1>
-          <button class="button">Invest</button>
+          <button class="button scrollToForm">Invest</button>
       </div>
         <img class="bannerGlobe" src="../public/media/images/banner/bannerGlobe.png" alt="">
       </section>
@@ -188,7 +188,7 @@
             </p>
           </div>
         </div>
-        <button class="button fadeOutBtn">Invest</button>
+        <button class="button fadeOutBtn scrollToForm">Invest</button>
         <div class="gsap-image human">
         </div>
         <div class="gsap-image spiral">
@@ -209,7 +209,7 @@
           <p>
             Explore the future of finance with secure and controlled currency transfers right in the palm of your hand
           </p>
-          <button class="button">Invest</button>
+          <button class="button scrollToForm">Invest</button>
         </div>
         <div class="spiral">
           <div class="text-block">
@@ -270,7 +270,7 @@
           <div class="scalable-element">
             <div class="text-box">
               <h2>The Future has arrived</h2>
-              <button class="button">Get started</button>
+              <a class="button" href="https://cabinet.what-money.com/" target="_blank">Get started</a>
             </div>
           </span>
         </div>
@@ -290,7 +290,7 @@
         </div>
       </section>
       
-      <section class="form-section">
+      <section class="form-section" id="form-section-block">
         <div class="exchange">
           <h3>
             Enter the amount you want <span class="text-blue">to invest</span>
@@ -298,7 +298,7 @@
           <div class="exchange-wrapper">
             <div class="exchange-card" id="exchangeWrapperFirst">
               <div class="inputWrapper" id="inputWrapperFirst">
-                <input type="number" value="100.000"/>
+                <input type="number"/>
               </div>
               <div class="currency-wrapper">
                 <img
@@ -315,7 +315,7 @@
             <div class="exchange-card" id="exchangeWrapperSecond">
               <div class="inputWrapper" id="inputWrapperSecond">
                 <span class="text-blue">Exchange rate</span>
-                <input type="number" value="1083.00"/>
+                <input type="number"/>
               </div>
               <div class="currency-wrapper">
                 <img
@@ -422,8 +422,8 @@
     <div id="thank-you-popup" class="thank-you-popup">
       <img src="../public/media/icons/document.svg" alt="Document icon">
       <h3>Your contract has<br> been successfully sent <br> by email <span id="investorEmail">example@gmail.com</span></h3>
-      <a class="button loading" id="downloadDocument" download><img src="../public/media/icons/open.svg" alt="Open link">Open</a>
-      <a class="button light loading" id="printDocument" target="_blank"><img src="../public/media/icons/print.svg" alt="print document">Print</a>
+      <a class="button loading" id="downloadDocument" target="_blank"><div class="dots white"></div><span class="content"><img src="../public/media/icons/open.svg" alt="Open link">Open</span></a>
+      <a class="button light loading" id="printDocument" download><div class="dots blue"></div><span class="content"><img src="../public/media/icons/download.svg" alt="download document">Download</span></a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>

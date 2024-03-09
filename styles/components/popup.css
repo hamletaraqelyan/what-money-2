@@ -39,21 +39,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .thank-you-popup .button.loading {
   pointer-events: none;
-  animation: opacity 1s ease infinite alternate;
+  touch-action: none;
 }
 
-@keyframes opacity {
-  from {
-    opacity: 0.8;
-  }
+.thank-you-popup .button .content {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.5s ease 0.3s;
+}
 
-  to {
-    opacity: 0.5;
-  }
+.thank-you-popup .button .dots {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.thank-you-popup .button.loading .content {
+  opacity: 0;
+}
+
+.thank-you-popup .button.loading .dots {
+  opacity: 1;
 }
 
 .thank-you-popup .button img {
@@ -63,6 +74,63 @@
 
 .thank-you-popup .button:first-of-type {
   margin-bottom: var(--spacing-8);
+}
+
+.dots {
+  width: 5.8px;
+  height: 5.8px;
+  box-shadow: 9.6px 0, -9.6px 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dots.white {
+  background: #ffffff;
+  color: #ffffff;
+  animation: dots-white 1s infinite linear alternate;
+}
+
+@keyframes dots-white {
+  0% {
+    box-shadow: 9.6px 0, -9.6px 0;
+    background: transparent;
+  }
+
+  33% {
+    box-shadow: 9.6px 0, -9.6px 0 rgba(255, 255, 255, 0.13);
+    background: rgba(255, 255, 255, 0.13);
+  }
+
+  66% {
+    box-shadow: 9.6px 0 rgba(255, 255, 255, 0.13), -9.6px 0;
+    background: rgba(255, 255, 255, 0.13);
+  }
+}
+
+.dots.blue {
+  background: #1883ff;
+  color: #1883ff;
+  animation: dots-blue 1s infinite linear alternate;
+}
+
+@keyframes dots-blue {
+  0% {
+    box-shadow: 9.6px 0, -9.6px 0;
+    background: transparent;
+  }
+
+  33% {
+    box-shadow: 9.6px 0, -9.6px 0 rgba(24, 131, 255, 0.13);
+    background: rgba(24, 131, 255, 0.13);
+  }
+
+  66% {
+    box-shadow: 9.6px 0 rgba(24, 131, 255, 0.13), -9.6px 0;
+    background: rgba(24, 131, 255, 0.13);
+  }
 }
 
 @media (max-width: 480px) {

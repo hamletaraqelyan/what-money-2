@@ -404,4 +404,15 @@ $(() => {
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
     });
+
+  const scrollToForm = () => {
+    $("html, body").scrollTop($("#form-section-block").offset().top);
+
+    // $("html, body").animate(
+    //   { scrollTop: $("#form-section-block").offset().top },
+    //   3000
+    // );
+  };
+
+  $(".scrollToForm").click(scrollToForm);
 });
